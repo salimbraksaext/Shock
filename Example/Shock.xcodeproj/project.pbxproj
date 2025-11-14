@@ -36,6 +36,7 @@
 		CBF416CD230DE1F20087A914 /* ApiCallRequestDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF416CB230DE1EA0087A914 /* ApiCallRequestDataTests.swift */; };
 		F468D3A02EC7399200370182 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = F468D39F2EC7399200370182 /* Shock */; };
 		F468D3A22EC73ACF00370182 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = F468D3A12EC73ACF00370182 /* Shock */; };
+		F468D3A52EC73C6900370182 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = F468D3A42EC73C6900370182 /* Shock */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F468D3A52EC73C6900370182 /* Shock in Frameworks */,
 				28CF36BB9C72A116B41A9CCA /* Pods_Shock_Example.framework in Frameworks */,
 				F468D3A02EC7399200370182 /* Shock in Frameworks */,
 			);
@@ -316,7 +318,7 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				F468D39E2EC7399200370182 /* XCRemoteSwiftPackageReference "Shock" */,
+				F468D3A32EC73C6900370182 /* XCRemoteSwiftPackageReference "Shock" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -708,6 +710,14 @@
 				kind = branch;
 			};
 		};
+		F468D3A32EC73C6900370182 /* XCRemoteSwiftPackageReference "Shock" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/salimbraksaext/Shock";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -719,6 +729,11 @@
 		F468D3A12EC73ACF00370182 /* Shock */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F468D39E2EC7399200370182 /* XCRemoteSwiftPackageReference "Shock" */;
+			productName = Shock;
+		};
+		F468D3A42EC73C6900370182 /* Shock */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F468D3A32EC73C6900370182 /* XCRemoteSwiftPackageReference "Shock" */;
 			productName = Shock;
 		};
 /* End XCSwiftPackageProductDependency section */
