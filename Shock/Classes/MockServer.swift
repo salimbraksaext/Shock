@@ -71,8 +71,12 @@ Run `netstat -anptcp | grep LISTEN` to check which ports are in use.")
     }
     
     public func stop() {
-        httpServer.stop()
-        loggingClosure?("SUCCESS: Closed server on port: \(selectedHTTPPort)")
+        do {
+            try httpServer.tryStop()
+            loggingClosure?("SUCCESS: Closed server on port: \(selectedHTTPPort)")
+        } catch {
+            loggingClosure?("ERROR: Closing server on port: \(selectedHTTPPort)")
+        }
     }
     
     /// Indicates whether a 404 status should be sent for requests that do

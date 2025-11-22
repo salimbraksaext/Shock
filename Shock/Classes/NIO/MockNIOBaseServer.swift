@@ -49,9 +49,13 @@ class MockNIOBaseServer {
         }
         localAddress = "\(channelLocalAddress)"
     }
-    
+
+    func tryStop() throws {
+        try group.syncShutdownGracefully()
+        try threadPool.syncShutdownGracefully()
+    }
+
     func stop() {
-        try! group.syncShutdownGracefully()
-        try! threadPool.syncShutdownGracefully()
+        try? tryStop()
     }
 }
