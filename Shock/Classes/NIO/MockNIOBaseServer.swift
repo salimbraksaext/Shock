@@ -20,8 +20,8 @@ class MockNIOBaseServer {
     private(set) var localAddress: String?
     
     init() {
-        self.group = MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)
-        self.threadPool = NIOThreadPool(numberOfThreads: 6)
+        self.group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
+        self.threadPool = NIOThreadPool(numberOfThreads: 2)
     }
     
     func start(_ port: Int, childChannelInitializer: @escaping (Channel) -> EventLoopFuture<Void>) throws -> Void {
